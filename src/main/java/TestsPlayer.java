@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 public class TestsPlayer {
 
     private WebElement userName;
+    private WebElement password;
+    private WebElement confirmPassword;
     private WebElement email;
     private WebElement firstName;
     private WebElement lastName;
@@ -18,6 +20,8 @@ public class TestsPlayer {
 
     public TestsPlayer(WebDriver driver) {
         this.userName = driver.findElement(By.xpath("//input[contains(@id,'login')]"));
+        this.password=driver.findElement(By.xpath("//input[contains(@id,'us_password')]"));
+        this.confirmPassword=driver.findElement(By.xpath("//input[contains(@id,'confirm_password')]"));
         this.email = driver.findElement(By.xpath("//input[contains(@id,'email')]"));
         this.firstName = driver.findElement(By.xpath("//input[contains(@id,'us_fname')]"));
         this.lastName = driver.findElement(By.xpath("//input[contains(@id,'us_lname')]"));
@@ -30,6 +34,8 @@ public class TestsPlayer {
     public void createPlayer(PokerPlayer pokerPlayer){
         userName.sendKeys(pokerPlayer.getUserName());
         email.sendKeys(pokerPlayer.getEmail());
+        password.sendKeys(pokerPlayer.getPassword());
+        confirmPassword.sendKeys(pokerPlayer.getPassword());
         firstName.sendKeys(pokerPlayer.getFirstName());
         lastName.sendKeys(pokerPlayer.getLastName());
         city.sendKeys(pokerPlayer.getCity());
@@ -75,4 +81,7 @@ public class TestsPlayer {
         }
     }
 
+    public WebElement getConfirmPassword() {
+        return confirmPassword;
+    }
 }

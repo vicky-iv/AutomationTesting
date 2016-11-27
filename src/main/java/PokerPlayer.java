@@ -64,6 +64,10 @@ public class PokerPlayer {
         return phone;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
     @Override
     public String toString() {
         return "PokerPlayer{" +
@@ -105,4 +109,5 @@ public class PokerPlayer {
         result = 31 * result + (int) (phone ^ (phone >>> 32));
         return result;
     }
+
 }

@@ -24,36 +24,38 @@ public class Main {
         WebDriver driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-        TestsPlayer testsPlayer=new TestsPlayer(driver);
-
         String URL = "http://80.92.229.236:81";
 
         login(driver,"admin","123",URL);
 
-        //click on link Insert
-        //driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.findElement(By.xpath(".//a[contains(text(),'Insert')]")).click();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
+        TestsPlayer testsPlayer=new TestsPlayer(driver);
         PokerPlayer firstPlayer = new PokerPlayer();
         PokerPlayer secondPlayer =new PokerPlayer();
 
         testsPlayer.createPlayer(firstPlayer);
-        //click on button_save
+        driver.findElement(By.xpath(".//input[contains(@value,'Save')]")).click();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
         testsPlayer.assertString(driver.getTitle(),"Players");
 
         driver.findElement(By.xpath("//input[contains(@id, 'login') and not(contains(@id,'last'))]")).sendKeys(firstPlayer.getUserName());
-        //click on button search
+        driver.findElement(By.xpath(".//input[contains(@value,'Search')]")).click();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-        //проверить найден ли игрок, может по почте глянуть
-        //клинуть на иконку редактирования
+        driver.findElement(By.xpath("//a[text()='bbb13@gmail.com']/ancestor::tr//a[contains(@href,'edit/")).click();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
         testsPlayer.checkContentPokerPlayer(firstPlayer);
 
         testsPlayer.editPlayer(secondPlayer);
-        //click on button_save
+        driver.findElement(By.xpath(".//input[contains(@value,'Save')]")).click();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-        //проверить найден ли игрок, может по почте глянуть
-        //клинуть на иконку редактирования
+        driver.findElement(By.xpath("//a[text()='bbb13@gmail.com']/ancestor::tr//a[contains(@href,'edit/")).click();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
         testsPlayer.checkContentPokerPlayer(firstPlayer);
     }
