@@ -1,7 +1,5 @@
-import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -22,42 +20,46 @@ public class Main {
 
     public static void main(String[] args) {
         WebDriver driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         String URL = "http://80.92.229.236:81";
 
         login(driver,"admin","123",URL);
 
         driver.findElement(By.xpath(".//a[contains(text(),'Insert')]")).click();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-        TestsPlayer testsPlayer=new TestsPlayer(driver);
+        TestsForPlayer testsPlayer=new TestsForPlayer(driver,true);
         PokerPlayer firstPlayer = new PokerPlayer();
         PokerPlayer secondPlayer =new PokerPlayer();
 
         testsPlayer.createPlayer(firstPlayer);
         driver.findElement(By.xpath(".//input[contains(@value,'Save')]")).click();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-        testsPlayer.assertString(driver.getTitle(),"Players");
+        System.out.println("Title 'Players' is opened: ");
+        testsPlayer.assertString(driver.getTitle(),"Players"); //проверка заголовка
 
-        driver.findElement(By.xpath("//input[contains(@id, 'login') and not(contains(@id,'last'))]")).sendKeys(firstPlayer.getUserName());
+        driver.findElement(By.xpath("//input[contains(@id, 'login') and not(contains(@id,'last'))]")).sendKeys(firstPlayer.getUserName());//поиск игрока
         driver.findElement(By.xpath(".//input[contains(@value,'Search')]")).click();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-        driver.findElement(By.xpath("//a[text()='bbb13@gmail.com']/ancestor::tr//a[contains(@href,'edit/")).click();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.findElement(By.xpath("//a[text()='"+firstPlayer.getEmail()+"']/ancestor::tr//a[contains(@href,'edit/id')]")).click();//нажатие на иконку редактирования
 
-        testsPlayer.checkContentPokerPlayer(firstPlayer);
+        System.out.println("Title 'Players - Edit' is opened: ");
+        testsPlayer.assertString(driver.getTitle(), "Players - Edit");
 
-        testsPlayer.editPlayer(secondPlayer);
+        new TestsForPlayer(driver,false).checkContentPlayer(firstPlayer);
+
+        new TestsForPlayer(driver,false).editPlayer(secondPlayer);
         driver.findElement(By.xpath(".//input[contains(@value,'Save')]")).click();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-        driver.findElement(By.xpath("//a[text()='bbb13@gmail.com']/ancestor::tr//a[contains(@href,'edit/")).click();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        System.out.println("Title 'Players' is opened: ");
+        testsPlayer.assertString(driver.getTitle(),"Players"); //проверка заголовка
 
-        testsPlayer.checkContentPokerPlayer(firstPlayer);
+        driver.findElement(By.xpath("//a[text()='"+firstPlayer.getEmail()+"']/ancestor::tr//a[contains(@href,'edit/id')]")).click(); //нажатие на иконку редактирования
+
+        System.out.println("Title 'Players - Edit' is opened: ");
+        testsPlayer.assertString(driver.getTitle(), "Players - Edit");
+
+        new TestsForPlayer(driver,false).checkContentPlayer(secondPlayer);
     }
 
 }

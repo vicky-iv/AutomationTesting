@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 /**
  * Created by Victoria on 24.11.2016.
  */
-public class TestsPlayer {
+public class TestsForPlayer {
 
     private WebElement userName;
     private WebElement password;
@@ -18,10 +18,12 @@ public class TestsPlayer {
     private WebElement phone;
 
 
-    public TestsPlayer(WebDriver driver) {
+    public TestsForPlayer(WebDriver driver, boolean isNewPlayer) {
+        if (isNewPlayer==true){
+            this.password=driver.findElement(By.xpath("//input[contains(@id,'us_password')]"));
+            this.confirmPassword=driver.findElement(By.xpath("//input[contains(@id,'confirm_password')]"));
+        }
         this.userName = driver.findElement(By.xpath("//input[contains(@id,'login')]"));
-        this.password=driver.findElement(By.xpath("//input[contains(@id,'us_password')]"));
-        this.confirmPassword=driver.findElement(By.xpath("//input[contains(@id,'confirm_password')]"));
         this.email = driver.findElement(By.xpath("//input[contains(@id,'email')]"));
         this.firstName = driver.findElement(By.xpath("//input[contains(@id,'us_fname')]"));
         this.lastName = driver.findElement(By.xpath("//input[contains(@id,'us_lname')]"));
@@ -43,8 +45,14 @@ public class TestsPlayer {
         phone.sendKeys(pokerPlayer.getPhone().toString());
     }
 
-    public void editPlayer(PokerPlayer pokerPlayer){//попробовать созданием
-        userName.sendKeys(pokerPlayer.getUserName());
+
+    public void editPlayer(PokerPlayer pokerPlayer){
+        firstName.clear();
+        lastName.clear();
+        city.clear();
+        address.clear();
+        phone.clear();
+
         firstName.sendKeys(pokerPlayer.getFirstName());
         lastName.sendKeys(pokerPlayer.getLastName());
         city.sendKeys(pokerPlayer.getCity());
@@ -52,24 +60,24 @@ public class TestsPlayer {
         phone.sendKeys(pokerPlayer.getPhone().toString());
     }
 
-    public void checkContentPokerPlayer(PokerPlayer expectedPlayer){
+    public void checkContentPlayer(PokerPlayer expectedPlayer){
         System.out.println("Email: ");
-        assertString(email.getText(),expectedPlayer.getEmail());
+        assertString(email.getAttribute("value"),expectedPlayer.getEmail());
 
         System.out.println("First Name: ");
-        assertString(firstName.getText(),expectedPlayer.getFirstName());
+        assertString(firstName.getAttribute("value"),expectedPlayer.getFirstName());
 
         System.out.println("Last Name: ");
-        assertString(lastName.getText(),expectedPlayer.getLastName());
+        assertString(lastName.getAttribute("value"),expectedPlayer.getLastName());
 
         System.out.println("City: ");
-        assertString(city.getText(),expectedPlayer.getCity());
+        assertString(city.getAttribute("value"),expectedPlayer.getCity());
 
         System.out.println("Address: ");
-        assertString(address.getText(),expectedPlayer.getAddress());
+        assertString(address.getAttribute("value"),expectedPlayer.getAddress());
 
         System.out.println("Phone: ");
-        assertString(phone.getText(),expectedPlayer.getPhone().toString());
+        assertString(phone.getAttribute("value"),expectedPlayer.getPhone().toString());
     }
 
     public static void assertString(String actualResult, String expectedResult) {
