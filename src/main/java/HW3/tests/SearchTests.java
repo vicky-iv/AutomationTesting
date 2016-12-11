@@ -29,34 +29,6 @@ public class SearchTests {
     private String address;
     private Long phone;
 
-    private void createUserForSearch() {
-
-        RandomStringUtils randomStringUtils = new RandomStringUtils();
-        this.userName = randomStringUtils.randomAlphanumeric(7);
-        this.email = userName + "@gmail.com";
-        this.password = randomStringUtils.randomAlphanumeric(7);
-        this.firstName = randomStringUtils.randomAlphanumeric(7);
-        this.lastName = randomStringUtils.randomAlphanumeric(7);
-        this.city = randomStringUtils.randomAlphanumeric(7);
-        this.address = randomStringUtils.randomAlphanumeric(7);
-        this.phone = Long.parseLong(randomStringUtils.randomNumeric(12));
-
-        playersPage.clickOnInsert();
-        editPlayerPage = new EditPlayerPage(driver);
-
-        editPlayerPage.setUsername(userName);
-        editPlayerPage.setEmail(email);
-        editPlayerPage.setPassword(password);
-        editPlayerPage.setConfirmPassword(password);
-        editPlayerPage.setFirstName(firstName);
-        editPlayerPage.setLastName(lastName);
-        editPlayerPage.setCity(city);
-        editPlayerPage.setAddress(address);
-        editPlayerPage.setPhone(phone);
-
-        editPlayerPage.clickOnSave();
-    }
-
     /**
      * Default preconditions:
      * 1. Open FireFox browser
@@ -193,5 +165,33 @@ public class SearchTests {
     @AfterTest
     public void afterTest() {
         driver.quit();
+    }
+
+    private void createUserForSearch() {
+
+        RandomStringUtils randomStringUtils = new RandomStringUtils();
+        this.userName = randomStringUtils.randomAlphanumeric(7);
+        this.email = userName + "@gmail.com";
+        this.password = randomStringUtils.randomAlphanumeric(7);
+        this.firstName = randomStringUtils.randomAlphanumeric(7);
+        this.lastName = randomStringUtils.randomAlphanumeric(7);
+        this.city = randomStringUtils.randomAlphanumeric(7);
+        this.address = randomStringUtils.randomAlphanumeric(7);
+        this.phone = Long.parseLong(randomStringUtils.randomNumeric(12));
+
+        playersPage.clickOnInsert();
+        editPlayerPage = new EditPlayerPage(driver);
+
+        editPlayerPage.setUsername(userName);
+        editPlayerPage.setEmail(email);
+        editPlayerPage.setPassword(password);
+        editPlayerPage.setConfirmPassword(password);
+        editPlayerPage.setFirstName(firstName);
+        editPlayerPage.setLastName(lastName);
+        editPlayerPage.setCity(city);
+        editPlayerPage.setAddress(address);
+        editPlayerPage.setPhone(phone);
+
+        editPlayerPage.clickOnSave();
     }
 }

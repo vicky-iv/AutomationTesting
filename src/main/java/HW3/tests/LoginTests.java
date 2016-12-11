@@ -4,10 +4,7 @@ import HW3.pages.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 
 import java.util.concurrent.TimeUnit;
@@ -49,10 +46,17 @@ public class LoginTests {
      * 3. Click on 'Login' button
      * 4. Verify that title of the page equals to "Players"
      */
-    @Test
-    public void positiveLoginTest() {
-        loginPage.setUsername("admin");
-        loginPage.setPassword("123");
+    @DataProvider
+    public Object[][] correctData() {
+        return new Object[][]{
+                {"admin", "123"}
+        };
+    }
+
+    @Test(dataProvider = "correctData",dependsOnGroups = {"negativeTests"})
+    public void positiveLoginTest(String username, String password) {
+        loginPage.setUsername(username);
+        loginPage.setPassword(password);
         loginPage.clickOnLogin();
 
         Assert.assertEquals(loginPage.getTitle(), "Players", "Wrong Title after login");
@@ -65,45 +69,34 @@ public class LoginTests {
      * 2. Set password to "123"
      * 3. Click on 'Login' button
      * 4. Verify that message error equals to "Invalid username or password"
+     * 5. Repeat steps 1-4 with username="admin" and password="12345"
      */
-    @Test
-    public void negativeUsernameTest() {
-        loginPage.setUsername("badAdmin");
-        loginPage.setPassword("123");
+    @DataProvider
+    public Object[][] incorrectData() {
+        return new Object[][]{
+                {"badAdmin", "123", "Invalid username or password"},
+                {"admin", "12345", "Invalid username or password"}
+        };
+    }
+
+    @Test(dataProvider = "incorrectData", groups = {"negativeTests"})
+    public void negativeLoginTest(String username, String password, String errorMsg) {
+        loginPage.setUsername(username);
+        loginPage.setPassword(password);
         loginPage.clickOnLogin();
 
-        Assert.assertEquals(loginPage.getErrorMessage(), "Invalid username or password", "Wrong message error after enter incorrect username");
+        Assert.assertEquals(loginPage.getErrorMessage(), errorMsg, "Wrong message error after enter incorrect username");
     }
+
 
     /**
      * Steps to reproduce:
-     * 1. Set username to "admin"
-     * 2. Set password to "1234d"
-     * 3. Click on 'Login' button
-     * 4. Verify that message error equals to "Invalid username or password"
+     * 1. Click on 'Login' button
+     * 2. Verify that first message error equals to "Value is required and can't be empty"
+     * 3. Verify that second message error equals to "Value is required and can't be empty"
      */
-    @Test
-    public void negativePasswordTest() {
-        loginPage.setUsername("admin");
-        loginPage.setPassword("1234d");
-        loginPage.clickOnLogin();
-
-        Assert.assertEquals(loginPage.getErrorMessage(), "Invalid username or password", "Wrong message error after enter incorrect password");
-
-    }
-
-    /**
-     * Steps to reproduce:
-     * 1. Set username to " "(empty)
-     * 2. Set password to " "(empty)
-     * 3. Click on 'Login' button
-     * 4. Verify that first message error equals to "Value is required and can't be empty"
-     * 5. Verify that second message error equals to "Value is required and can't be empty"
-     */
-    @Test
+    @Test(groups = {"negativeTests"})
     public void emptyUsernameAndPasswordTest() {
-        loginPage.setUsername(" ");
-        loginPage.setPassword(" ");
         loginPage.clickOnLogin();
 
         SoftAssert softAssert = new SoftAssert();

@@ -40,11 +40,11 @@ public class EditPlayerPage {
     private WebElement phoneField;
 
     public EditPlayerPage(WebDriver driver) {
-        this.driver=driver;
+        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    public String getTitle(){
+    public String getTitle() {
         return driver.getTitle();
     }
 
@@ -93,11 +93,11 @@ public class EditPlayerPage {
         phoneField.sendKeys(phone.toString());
     }
 
-    public void clickOnSave(){
+    public void clickOnSave() {
         driver.findElement(By.xpath(".//input[contains(@value,'Save')]")).click();
     }
 
-    public void clickOnCancel(){
+    public void clickOnCancel() {
         driver.findElement(By.xpath(".//input[contains(@value,'Cancel')]")).click();
     }
 

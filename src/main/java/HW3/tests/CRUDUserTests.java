@@ -7,10 +7,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 
 import java.util.concurrent.TimeUnit;
@@ -23,20 +20,9 @@ public class CRUDUserTests {
     private LoginPage loginPage;
     private PlayersPage playersPage;
     private EditPlayerPage editPlayerPage;
+    private RandomStringUtils randomStringUtils = new RandomStringUtils();
 
-    private String userName;
-    private String email;
-    private String password;
-    private String firstName;
-    private String lastName;
-    private String city;
-    private String address;
-    private Long phone;
-
-    private void searchPlayer(String userName) {
-        playersPage.setPlayerFieldForSearch(userName);
-        playersPage.clickOnSearch();
-    }
+    private final String userName = randomStringUtils.randomAlphanumeric(7);
 
     /**
      * Default preconditions:
@@ -94,18 +80,34 @@ public class CRUDUserTests {
      * phone
      * 4. Click on 'Save' button
      * 5. Verify that title of the page equals to "Players"
+     * 6. Search player by username
+     * 7. Verify that the created player is present in the search results
+     * 8. Click on 'Edit' icon
+     * 9. Verify the contents of the fields:
+     * email
+     * first name
+     * last name
+     * city
+     * address
+     * phone
      */
-    @Test(priority = 1)
-    public void createUser() {
-        RandomStringUtils randomStringUtils = new RandomStringUtils();
-        this.userName = randomStringUtils.randomAlphanumeric(7);
-        this.email = userName + "@gmail.com";
-        this.password = randomStringUtils.randomAlphanumeric(7);
-        this.firstName = randomStringUtils.randomAlphanumeric(7);
-        this.lastName = randomStringUtils.randomAlphanumeric(7);
-        this.city = randomStringUtils.randomAlphanumeric(7);
-        this.address = randomStringUtils.randomAlphanumeric(7);
-        this.phone = Long.parseLong(randomStringUtils.randomNumeric(12));
+    @DataProvider
+    public Object[][] createUserData() {
+        return new Object[][]{
+                {
+                        userName + "@gmail.com",
+                        randomStringUtils.randomAlphanumeric(7),
+                        randomStringUtils.randomAlphanumeric(7),
+                        randomStringUtils.randomAlphanumeric(7),
+                        randomStringUtils.randomAlphanumeric(7),
+                        randomStringUtils.randomAlphanumeric(7),
+                        Long.parseLong(randomStringUtils.randomNumeric(12))
+                }
+        };
+    }
+
+    @Test(dataProvider = "createUserData")
+    public void createUser(String email, String password, String firstName, String lastName, String city, String address, Long phone) {
 
         playersPage.clickOnInsert();
 
@@ -122,6 +124,7 @@ public class CRUDUserTests {
         editPlayerPage.clickOnSave();
 
         Assert.assertEquals(editPlayerPage.getTitle(), "Players", "Wrong Title after save new player");
+        checkContentPlayer(userName, email, firstName, lastName, city, address, phone);
     }
 
     /**
@@ -133,7 +136,7 @@ public class CRUDUserTests {
      * city
      * address
      * phone
-     * 2. Click on 'Insert' button
+     * 2. Click on 'Edit' icon
      * 3. Fill the fields:
      * email
      * first name
@@ -143,16 +146,34 @@ public class CRUDUserTests {
      * phone
      * 4. Click on 'Save' button
      * 5. Verify that title of the page equals to "Players"
+     * 6. Search player by username
+     * 7. Verify that the edited player is present in the search results
+     * 8. Click on 'Edit' icon
+     * 9. Verify the contents of the fields:
+     * email
+     * first name
+     * last name
+     * city
+     * address
+     * phone
      */
-    @Test(priority = 2)
-    public void editUser() {
-        RandomStringUtils randomStringUtils = new RandomStringUtils();
-        this.email = randomStringUtils.randomAlphanumeric(7) + "@mail.com";
-        this.firstName = randomStringUtils.randomAlphanumeric(7);
-        this.lastName = randomStringUtils.randomAlphanumeric(7);
-        this.city = randomStringUtils.randomAlphanumeric(7);
-        this.address = randomStringUtils.randomAlphanumeric(7);
-        this.phone = Long.parseLong(randomStringUtils.randomNumeric(12));
+
+    @DataProvider
+    public Object[][] editUserData() {
+        return new Object[][]{
+                {
+                        randomStringUtils.randomAlphanumeric(7) + "@gmail.com",
+                        randomStringUtils.randomAlphanumeric(7),
+                        randomStringUtils.randomAlphanumeric(7),
+                        randomStringUtils.randomAlphanumeric(7),
+                        randomStringUtils.randomAlphanumeric(7),
+                        Long.parseLong(randomStringUtils.randomNumeric(12))
+                }
+        };
+    }
+
+    @Test(dependsOnMethods = {"createUser"}, dataProvider = "editUserData", alwaysRun = true)
+    public void editUser(String email, String firstName, String lastName, String city, String address, Long phone) {
 
         searchPlayer(userName);
         playersPage.clickOnEditUser(userName);
@@ -166,33 +187,7 @@ public class CRUDUserTests {
 
         editPlayerPage.clickOnSave();
         Assert.assertEquals(editPlayerPage.getTitle(), "Players", "Wrong Title after saving the edited user");
-    }
-
-    /**
-     * Steps to reproduce:
-     * 1. Search player by username
-     * 2. Click on 'Edit' icon
-     * 3. Verify the contents of the fields:
-     * email
-     * first name
-     * last name
-     * city
-     * address
-     * phone
-     */
-    @Test(priority = 3)
-    public void checkContentPlayer() {
-        searchPlayer(userName);
-        playersPage.clickOnEditUser(userName);
-
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(editPlayerPage.getEmail(), email, "Wrong Email");
-        softAssert.assertEquals(editPlayerPage.getFirstName(), firstName, "Wrong First Name");
-        softAssert.assertEquals(editPlayerPage.getLastName(), lastName, "Wrong Last Name");
-        softAssert.assertEquals(editPlayerPage.getCity(), city, "Wrong City");
-        softAssert.assertEquals(editPlayerPage.getAddress(), address, "Wrong Address");
-        softAssert.assertEquals(editPlayerPage.getPhone(), phone.toString(), "Wrong Phone");
-        softAssert.assertAll();
+        checkContentPlayer(userName, email, firstName, lastName, city, address, phone);
     }
 
     /**
@@ -200,9 +195,9 @@ public class CRUDUserTests {
      * 1. Search player by username
      * 2. Click on 'Delete' icon
      * 3. Search player by username
-     * 4. Verify of absence the player in search results
+     * 4. Verify that the player is absence in the search results
      */
-    @Test(priority = 4)
+    @Test(dependsOnMethods = "editUser", alwaysRun = true)
     public void deleteUser() {
         searchPlayer(userName);
         playersPage.clickOnDeleteUser(userName);
@@ -217,5 +212,24 @@ public class CRUDUserTests {
     @AfterTest
     public void afterTest() {
         driver.quit();
+    }
+
+    private void searchPlayer(String userName) {
+        playersPage.setPlayerFieldForSearch(userName);
+        playersPage.clickOnSearch();
+    }
+
+    private void checkContentPlayer(String userName, String email, String firstName, String lastName, String city, String address, Long phone) {
+        searchPlayer(userName);
+        playersPage.clickOnEditUser(userName);
+
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(editPlayerPage.getEmail(), email, "Wrong Email");
+        softAssert.assertEquals(editPlayerPage.getFirstName(), firstName, "Wrong First Name");
+        softAssert.assertEquals(editPlayerPage.getLastName(), lastName, "Wrong Last Name");
+        softAssert.assertEquals(editPlayerPage.getCity(), city, "Wrong City");
+        softAssert.assertEquals(editPlayerPage.getAddress(), address, "Wrong Address");
+        softAssert.assertEquals(editPlayerPage.getPhone(), phone.toString(), "Wrong Phone");
+        softAssert.assertAll();
     }
 }

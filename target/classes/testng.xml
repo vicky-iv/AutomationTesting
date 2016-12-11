@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Poker Suite" verbose="1" >
+
+    <test name="Login" >
+        <classes>
+            <class name="HW3.tests.LoginTests"/>
+        </classes>
+
+    </test>
+
+    <test name="CRUD" >
+        <classes>
+            <class name="HW3.tests.CRUDUserTests"/>
+        </classes>
+    </test>
+
+    <test name="SearchUser" >
+        <classes>
+            <class name="HW3.tests.SearchTests"/>
+        </classes>
+
+    </test>
+
+</suite>

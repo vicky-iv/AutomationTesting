@@ -3,6 +3,8 @@ package HW3.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
@@ -13,8 +15,18 @@ public class LoginPage {
     private WebDriver driver;
     private static final String URL = "http://80.92.229.236:81/auth/login";
 
+    @FindBy(id = "username")
+    private WebElement usernameInput;
+
+    @FindBy(id = "password")
+    private WebElement passwordInput;
+
+    @FindBy(id = "logIn")
+    private WebElement logInBut;
+
     public LoginPage(WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
     public void open() {
@@ -22,19 +34,16 @@ public class LoginPage {
     }
 
     public void setUsername(String username) {
-        WebElement usernameInput = driver.findElement(By.id("username"));
         usernameInput.clear();
         usernameInput.sendKeys(username);
     }
 
     public void setPassword(String password) {
-        WebElement passwordInput = driver.findElement(By.id("password"));
         passwordInput.clear();
         passwordInput.sendKeys(password);
     }
 
     public void clickOnLogin() {
-        WebElement logInBut = driver.findElement(By.id("logIn"));
         logInBut.click();
     }
 
@@ -48,7 +57,12 @@ public class LoginPage {
 
     public String getErrorMessage(int numberOfError) {
         List<WebElement> errorMsgs = driver.findElements(By.xpath(".//*[contains(@class,'errors')]"));
-        return errorMsgs.get(numberOfError - 1).getText();
+        if (numberOfError <= errorMsgs.size()) {
+            return errorMsgs.get(numberOfError - 1).getText();
+        } else {
+            return "No such error message";
+        }
+
     }
 
 }

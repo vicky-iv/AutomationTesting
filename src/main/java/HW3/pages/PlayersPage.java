@@ -72,12 +72,7 @@ public class PlayersPage {
     }
 
     public boolean isPlayerPresent(String username) {
-        try {
-            driver.findElement(By.xpath(".//a[contains(text(),'" + username + "')]"));
-        } catch (NoSuchElementException e) {
-            return false;
-        }
-        return true;
+        return driver.findElements(By.xpath(".//a[contains(text(),'" + username + "')]")).size() > 0;
     }
 
     public void setPlayerFieldForSearch(String username) {
