@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Drag and Drop</title>
+	<link rel="stylesheet" href="css/drag_and_drop.css">
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	 <script>
+		$(function() {
+			//Sorting li
+			var collection = $("#sortable li").get();
+			collection.sort(function() {
+				return Math.random()*10 > 5 ? 1 : -1;
+			});
+			$.each(collection,function(i,el) {
+				var color = this.className,
+					$el = $(el);
+				$el.css({backgroundColor: color}).appendTo( $el.parent() );
+			});
+			//Drag and Drop
+			$("#sortable").sortable();
+			$("#sortable").disableSelection();
+			$("#drop").droppable({
+				accept: "#sortable li",
+				drop: function (e, f) {
+					 if (confirm('Are you sure that you want to delete?')) {
+						f.draggable.remove();
+					}				
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="content">
+		<div class="draggable-content"> 
+			<h3>Drag and Drop</h3>	
+			<ul id="sortable">
+				<li class="ui-state-default">1</li>
+				<li class="ui-state-default">2</li>
+				<li class="ui-state-default">3</li>
+				<li class="ui-state-default">4</li>
+				<li class="ui-state-default">5</li>
+				<li class="ui-state-default">6</li>
+				<li class="ui-state-default">7</li>
+			</ul>    
+		</div>
+		<div id="drop">Trash</div>
+	</div>
+
+</body>
+</html>

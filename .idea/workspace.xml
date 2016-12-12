@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83a93c9f-e266-4ae2-aa28-f6165ea9f745" name="Default" comment="ADD: HW3">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/testng.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/HW3/pages/LoginPage.class" afterPath="$PROJECT_DIR$/target/classes/HW3/pages/LoginPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/HW3/pages/PlayersPage.class" afterPath="$PROJECT_DIR$/target/classes/HW3/pages/PlayersPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/HW3/tests/CRUDUserTests.class" afterPath="$PROJECT_DIR$/target/classes/HW3/tests/CRUDUserTests.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/HW3/tests/LoginTests.class" afterPath="$PROJECT_DIR$/target/classes/HW3/tests/LoginTests.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/HW3/tests/SearchTests.class" afterPath="$PROJECT_DIR$/target/classes/HW3/tests/SearchTests.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dragAndDrop/ActionPage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dragAndDrop/ActionTests.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/HW3/pages/EditPlayerPage.java" afterPath="$PROJECT_DIR$/src/main/java/HW3/pages/EditPlayerPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/HW3/pages/LoginPage.java" afterPath="$PROJECT_DIR$/src/main/java/HW3/pages/LoginPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/HW3/pages/PlayersPage.java" afterPath="$PROJECT_DIR$/src/main/java/HW3/pages/PlayersPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/HW3/tests/CRUDUserTests.java" afterPath="$PROJECT_DIR$/src/main/java/HW3/tests/CRUDUserTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/HW3/tests/LoginTests.java" afterPath="$PROJECT_DIR$/src/main/java/HW3/tests/LoginTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/HW3/tests/SearchTests.java" afterPath="$PROJECT_DIR$/src/main/java/HW3/tests/SearchTests.java" />
     </list>
     <ignored path="HWAuto_2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,7 +37,52 @@
     <favorites_list name="HWAuto_2" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ActionPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dragAndDrop/ActionPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActionTests.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dragAndDrop/ActionTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="14">
+              <caret line="36" column="7" lean-forward="false" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditPlayerPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/HW3/pages/EditPlayerPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1108">
+              <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CRUDUserTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/HW3/tests/CRUDUserTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-612">
+              <caret line="22" column="73" lean-forward="true" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -90,6 +124,8 @@
         <option value="$PROJECT_DIR$/src/main/java/HW3/pages/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/main/resources/testng.xml" />
         <option value="$PROJECT_DIR$/src/main/java/HW3/tests/CRUDUserTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dragAndDrop/ActionPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dragAndDrop/ActionTests.java" />
       </list>
     </option>
   </component>
@@ -174,7 +210,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -305,10 +340,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HWAuto_2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HWAuto_2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dragAndDrop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -325,40 +387,7 @@
       <recent name="D:\University\TEAM Int\Auto\Auto_testing\HWAuto_2\src\main\java\Practice4" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CRUDUserTests.editUser">
-    <configuration default="false" name="CRUDUserTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="HW3.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="HWAuto_2" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="HW3.tests" />
-      <option name="MAIN_CLASS_NAME" value="HW3.tests.CRUDUserTests" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="TestNG.ActionTests.deleteTest">
     <configuration default="false" name="D:/University/TEAM Int/Auto/Auto_testing/HWAuto_2/src/main/resources/testng.xml" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="HWAuto_2" />
@@ -370,72 +399,6 @@
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="SUITE" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="false" name="CRUDUserTests.createUser" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="HW3.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="HWAuto_2" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="HW3.tests" />
-      <option name="MAIN_CLASS_NAME" value="HW3.tests.CRUDUserTests" />
-      <option name="METHOD_NAME" value="createUser" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="false" name="LoginTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="HW3.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="HWAuto_2" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="HW3.tests" />
-      <option name="MAIN_CLASS_NAME" value="HW3.tests.LoginTests" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -467,6 +430,105 @@
       <option name="PACKAGE_NAME" value="HW3.tests" />
       <option name="MAIN_CLASS_NAME" value="HW3.tests.CRUDUserTests" />
       <option name="METHOD_NAME" value="editUser" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="ActionTests.deleteTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="dragAndDrop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="HWAuto_2" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="dragAndDrop" />
+      <option name="MAIN_CLASS_NAME" value="dragAndDrop.ActionTests" />
+      <option name="METHOD_NAME" value="deleteTest" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="ActionTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="dragAndDrop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="HWAuto_2" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="dragAndDrop" />
+      <option name="MAIN_CLASS_NAME" value="dragAndDrop.ActionTests" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="ActionTests.sortTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="dragAndDrop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="HWAuto_2" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="dragAndDrop" />
+      <option name="MAIN_CLASS_NAME" value="dragAndDrop.ActionTests" />
+      <option name="METHOD_NAME" value="sortTest" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -890,19 +952,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="TestNG.CRUDUserTests" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.D:/University/TEAM Int/Auto/Auto_testing/HWAuto_2/src/main/resources/testng.xml" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.CRUDUserTests.createUser" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.LoginTests" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.CRUDUserTests.editUser" />
+      <item index="0" class="java.lang.String" itemvalue="TestNG.D:/University/TEAM Int/Auto/Auto_testing/HWAuto_2/src/main/resources/testng.xml" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.CRUDUserTests.editUser" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.ActionTests.deleteTest" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.ActionTests" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.ActionTests.sortTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.CRUDUserTests.editUser" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.D:/University/TEAM Int/Auto/Auto_testing/HWAuto_2/src/main/resources/testng.xml" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.LoginTests" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.CRUDUserTests.createUser" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.CRUDUserTests" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.ActionTests.deleteTest" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.ActionTests" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.ActionTests.sortTest" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.CRUDUserTests.editUser" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.D:/University/TEAM Int/Auto/Auto_testing/HWAuto_2/src/main/resources/testng.xml" />
       </list>
     </recent_temporary>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -953,7 +1015,8 @@
       <workItem from="1480770246723" duration="47489000" />
       <workItem from="1481116658142" duration="5633000" />
       <workItem from="1481365500471" duration="18257000" />
-      <workItem from="1481454448980" duration="4006000" />
+      <workItem from="1481454448980" duration="25132000" />
+      <workItem from="1481540879959" duration="2899000" />
     </task>
     <task id="LOCAL-00001" summary="FIX: PokerPlayer,TestPlayer&#10;UPD: Main">
       <created>1480266064042</created>
@@ -973,39 +1036,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CRUDUserTests_editUser - 2016.12.11 at 15h 16m 18s.xml">
-      <configuration name="CRUDUserTests.editUser" configurationId="TestNG" />
+    <history-entry file="ActionTests - 2016.12.12 at 13h 46m 53s.xml">
+      <configuration name="ActionTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__University_TEAM_Int_Auto_Auto_testing_HWAuto_2_src_main_resources_testng_xml - 2016.12.10 at 19h 22m 53s.xml">
-      <configuration name="D:/University/TEAM Int/Auto/Auto_testing/HWAuto_2/src/main/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="ActionTests_deleteTest - 2016.12.12 at 13h 49m 24s.xml">
+      <configuration name="ActionTests.deleteTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__University_TEAM_Int_Auto_Auto_testing_HWAuto_2_src_main_resources_testng_xml - 2016.12.10 at 19h 28m 51s.xml">
-      <configuration name="D:/University/TEAM Int/Auto/Auto_testing/HWAuto_2/src/main/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="ActionTests_deleteTest - 2016.12.12 at 13h 53m 05s.xml">
+      <configuration name="ActionTests.deleteTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__University_TEAM_Int_Auto_Auto_testing_HWAuto_2_src_main_resources_testng_xml - 2016.12.10 at 19h 35m 12s.xml">
-      <configuration name="D:/University/TEAM Int/Auto/Auto_testing/HWAuto_2/src/main/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="ActionTests_deleteTest - 2016.12.12 at 13h 54m 55s.xml">
+      <configuration name="ActionTests.deleteTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__University_TEAM_Int_Auto_Auto_testing_HWAuto_2_src_main_resources_testng_xml - 2016.12.10 at 19h 35m 24s.xml">
-      <configuration name="D:/University/TEAM Int/Auto/Auto_testing/HWAuto_2/src/main/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="ActionTests_deleteTest - 2016.12.12 at 13h 56m 05s.xml">
+      <configuration name="ActionTests.deleteTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__University_TEAM_Int_Auto_Auto_testing_HWAuto_2_src_main_resources_testng_xml - 2016.12.10 at 19h 36m 22s.xml">
-      <configuration name="D:/University/TEAM Int/Auto/Auto_testing/HWAuto_2/src/main/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="ActionTests_deleteTest - 2016.12.12 at 13h 59m 46s.xml">
+      <configuration name="ActionTests.deleteTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__University_TEAM_Int_Auto_Auto_testing_HWAuto_2_src_main_resources_testng_xml - 2016.12.11 at 14h 56m 29s.xml">
-      <configuration name="D:/University/TEAM Int/Auto/Auto_testing/HWAuto_2/src/main/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="ActionTests_sortTest - 2016.12.12 at 13h 37m 24s.xml">
+      <configuration name="ActionTests.sortTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__University_TEAM_Int_Auto_Auto_testing_HWAuto_2_src_main_resources_testng_xml - 2016.12.11 at 15h 10m 22s.xml">
-      <configuration name="D:/University/TEAM Int/Auto/Auto_testing/HWAuto_2/src/main/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="ActionTests_sortTest - 2016.12.12 at 13h 39m 21s.xml">
+      <configuration name="ActionTests.sortTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="D__University_TEAM_Int_Auto_Auto_testing_HWAuto_2_src_main_resources_testng_xml - 2016.12.11 at 15h 14m 39s.xml">
-      <configuration name="D:/University/TEAM Int/Auto/Auto_testing/HWAuto_2/src/main/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="ActionTests_sortTest - 2016.12.12 at 13h 39m 53s.xml">
+      <configuration name="ActionTests.sortTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="LoginTests - 2016.12.10 at 21h 06m 48s.xml">
-      <configuration name="LoginTests" configurationId="TestNG" />
+    <history-entry file="ActionTests_sortTest - 2016.12.12 at 13h 44m 45s.xml">
+      <configuration name="ActionTests.sortTest" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122515000" />
+    <option name="totallyTimeSpent" value="146540000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1018,24 +1081,24 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31423897" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35188216" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36006546" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19742814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15128593" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24879615" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1072,7 +1135,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="20" />
+      <option name="time" value="44" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1081,24 +1144,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/HW3/pages/EditPlayerPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="43" column="47" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HW3/tests/LoginTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/HW3/tests/CRUDUserTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3213">
@@ -1120,7 +1165,7 @@
         <state relative-caret-position="85">
           <caret line="5" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1129,9 +1174,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="23" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1139,7 +1181,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1342,7 +1383,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-100">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1351,51 +1391,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1649">
           <caret line="97" column="36" lean-forward="false" selection-start-line="97" selection-start-column="36" selection-end-line="97" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HW3/tests/SearchTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="178" column="63" lean-forward="true" selection-start-line="178" selection-start-column="63" selection-end-line="178" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HW3/pages/EditPlayerPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HW3/pages/PlayersPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="37" column="47" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HW3/pages/LoginPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="28" column="47" lean-forward="false" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HW3/tests/CRUDUserTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="182" column="31" lean-forward="false" selection-start-line="182" selection-start-column="31" selection-end-line="182" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1403,7 +1398,68 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="48" lean-forward="false" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HW3/tests/SearchTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2312">
+          <caret line="178" column="63" lean-forward="true" selection-start-line="178" selection-start-column="63" selection-end-line="178" selection-end-column="63" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HW3/pages/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-83">
+          <caret line="28" column="47" lean-forward="false" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HW3/pages/PlayersPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="37" column="47" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dragAndDrop/ActionPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HW3/pages/EditPlayerPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1108">
+          <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HW3/tests/CRUDUserTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612">
+          <caret line="22" column="73" lean-forward="true" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dragAndDrop/ActionTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="36" column="7" lean-forward="false" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

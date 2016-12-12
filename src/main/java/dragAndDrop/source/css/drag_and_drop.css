@@ -1,0 +1,57 @@
+.content {
+	font-family: Arial;
+}
+
+.content h3{
+	font-size: 20px;
+	font-weight: normal;
+	font-family: Arial;
+	color: #000;
+}
+
+.draggable-content {
+	color: #222222;
+	float: left;
+}
+
+#draggable p{ 
+	margin: 0;
+	padding: 0;
+} 
+
+#sortable { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+	width: 150px;
+}
+#sortable li {
+	margin: 0 0 15px 0; 
+	padding: 0; 
+	font-size: 14px; 
+	line-height: 25px;
+	text-align: center;
+	border: 1px solid #222222;
+    background: #b3d4fc;
+	color: #222222;
+	cursor: move;
+}
+#sortable li:hover {
+    cursor: pointer;
+}
+
+#sortable li.ui-sortable-helper{
+    cursor: move;
+}
+
+#drop{
+	float: left;
+	margin: 160px 0 0 130px;
+    background: #cccccc;
+	border: 1px solid #222222;
+	border-radius: 0 0 5px 5px;
+	width: 100px;
+	height: 80px;
+	text-align: center;
+	padding: 10px 0 0 0;
+}
